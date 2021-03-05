@@ -1,0 +1,60 @@
+@import 'variables';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: $light-color;
+    color: $dark-color;
+    font-family: $font-stack;
+    line-height: 1.5;
+}
+
+header {
+    background: $dark-color;
+    color: $light-color;
+    padding: 1rem;
+}
+
+
+h1 {
+    text-align: center;
+}
+
+.section {
+    padding: 3rem;
+
+
+h3 {
+    font-size: 2rem;
+}
+
+&-a {
+    background: $primary-color;
+}
+ 
+&-b {
+    background: $secondary-color;
+}
+}
+
+%btn-shared {
+    display: inline-block;
+    padding: .7rem 2rem;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
+.btn {
+    &-light {
+        @extend %btn-share;
+    }
+
+    &-dark {
+        @extend %btn-shared;
+    }
+}
